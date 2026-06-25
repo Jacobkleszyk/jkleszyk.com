@@ -1,131 +1,239 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Jacob Kleszyk</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 950px;
-      margin: auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-      color: #222;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Jacob Kleszyk</title>
 
-    nav {
-      margin-bottom: 60px;
-    }
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-    nav a {
-      margin-right: 20px;
-      color: #0d3b66;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f8fafc;
+            color:#222;
+            line-height:1.7;
+        }
 
-    h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
-    }
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:40px 25px;
+        }
 
-    .subtitle {
-      font-size: 21px;
-      color: #555;
-      max-width: 720px;
-    }
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:80px;
+        }
 
-    .service {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 28px;
-      margin-top: 28px;
-      background: #fafafa;
-    }
+        .logo{
+            font-size:26px;
+            font-weight:bold;
+            color:#0d3b66;
+        }
 
-    .service h2 {
-      margin-top: 0;
-      color: #0d3b66;
-    }
+        .menu a{
+            margin-left:30px;
+            text-decoration:none;
+            color:#333;
+            font-weight:bold;
+            transition:.2s;
+        }
 
-    .button {
-      display: inline-block;
-      background: #0d3b66;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      margin-top: 35px;
-    }
+        .menu a:hover{
+            color:#0d3b66;
+        }
 
-    footer {
-      margin-top: 70px;
-      padding-top: 25px;
-      border-top: 1px solid #ddd;
-      color: #666;
-    }
-  </style>
+        .hero{
+            margin-bottom:70px;
+        }
+
+        h1{
+            font-size:56px;
+            margin-bottom:15px;
+        }
+
+        .subtitle{
+            font-size:22px;
+            color:#555;
+            max-width:760px;
+        }
+
+        h2{
+            font-size:34px;
+            margin-bottom:35px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+            margin-bottom:80px;
+        }
+
+        .card{
+            background:white;
+            border-radius:10px;
+            padding:30px;
+            box-shadow:0 5px 18px rgba(0,0,0,.08);
+            transition:.2s;
+        }
+
+        .card:hover{
+            transform:translateY(-3px);
+            box-shadow:0 8px 24px rgba(0,0,0,.1);
+        }
+
+        .card h3{
+            color:#0d3b66;
+            margin-bottom:15px;
+            font-size:24px;
+        }
+
+        .cta{
+            background:white;
+            border-radius:10px;
+            padding:35px;
+            box-shadow:0 5px 18px rgba(0,0,0,.08);
+            margin-top:30px;
+        }
+
+        .button{
+            display:inline-block;
+            background:#0d3b66;
+            color:white;
+            text-decoration:none;
+            padding:15px 28px;
+            border-radius:8px;
+            margin-top:25px;
+            font-weight:bold;
+            transition:.2s;
+        }
+
+        .button:hover{
+            background:#164d83;
+        }
+
+        footer{
+            margin-top:90px;
+            text-align:center;
+            color:#666;
+            padding:25px;
+            border-top:1px solid #ddd;
+        }
+
+        @media(max-width:700px){
+            nav{
+                flex-direction:column;
+                gap:20px;
+            }
+
+            .menu a{
+                margin:0 10px;
+            }
+
+            h1{
+                font-size:44px;
+            }
+
+            .subtitle{
+                font-size:20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="mailto:jacobkleszyk@gmail.com">Contact</a>
-  </nav>
+<div class="container">
 
-  <h1>Services</h1>
+<nav>
+    <div class="logo">JK</div>
 
-  <p class="subtitle">
-    Practical support for organizations running awards, grants, applications,
-    submissions, and review programs using OpenWater.
-  </p>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="mailto:jacobkleszyk@gmail.com">Contact</a>
+    </div>
+</nav>
 
-  <div class="service">
-    <h2>OpenWater Program Setup</h2>
-    <p>
-      Support with configuring new or existing OpenWater programs, including
-      application forms, submission workflows, review rounds, scoring criteria,
-      user roles, email activities, and program settings.
+<section class="hero">
+    <h1>Services</h1>
+
+    <p class="subtitle">
+        Practical OpenWater support for organizations running awards,
+        grants, conferences, applications, submissions and review programs.
     </p>
-  </div>
+</section>
 
-  <div class="service">
-    <h2>Program Administration</h2>
+<section>
+    <h2>How I Can Help</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>OpenWater Program Setup</h3>
+            <p>
+                Configure new or existing OpenWater programs, including
+                forms, submission workflows, review rounds, scoring criteria,
+                user roles, email activities and program settings.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Program Administration</h3>
+            <p>
+                Day-to-day operational support for active programs, including
+                user and judge management, imports, reports, application updates,
+                reviewer assignments and general program maintenance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Troubleshooting & Support</h3>
+            <p>
+                Help identifying and resolving workflow issues, access problems,
+                judging assignment issues, email configuration concerns, reporting
+                questions and other platform-related problems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Process Review</h3>
+            <p>
+                Review your current awards, grant, application or review process
+                and provide recommendations to simplify workflows, reduce confusion
+                and improve the applicant or reviewer experience.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Need help with an OpenWater program?</h2>
+
     <p>
-      Day-to-day operational support for active programs, including user and judge
-      management, imports, reports, application updates, reviewer assignments,
-      applicant communication, and general program maintenance.
+        Whether you are launching a new program, managing an active cycle,
+        or trying to solve a platform issue, I can help review the situation
+        and recommend practical next steps.
     </p>
-  </div>
 
-  <div class="service">
-    <h2>Troubleshooting & Support</h2>
-    <p>
-      Help identifying and resolving workflow issues, access problems, judging
-      assignment issues, email configuration concerns, reporting questions, and
-      other platform-related problems.
-    </p>
-  </div>
+    <a class="button" href="mailto:jacobkleszyk@gmail.com">Contact Me</a>
+</section>
 
-  <div class="service">
-    <h2>Process Review</h2>
-    <p>
-      Review of your current awards, grant, application, or review process with
-      recommendations to simplify workflows, reduce confusion, improve reviewer
-      experience, and make administration easier.
-    </p>
-  </div>
+<footer>
+    © 2026 Jacob Kleszyk • OpenWater Administrator Certified • CAPM Certified
+</footer>
 
-  <a class="button" href="mailto:jacobkleszyk@gmail.com">Contact Me</a>
-
-  <footer>
-    Jacob Kleszyk · OpenWater Administrator Certified · CAPM Certified
-  </footer>
+</div>
 
 </body>
 </html>
-```
